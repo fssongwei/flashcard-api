@@ -19,8 +19,7 @@ const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 require("./utilities/passportConfig");
 
-app.use(require("./routers/records"));
-app.use(require("./routers/auth"));
+app.use(require("./routers/flashcards"));
 
 app.listen(process.env.PORT, () => {
   console.log("listen on port " + process.env.PORT);
