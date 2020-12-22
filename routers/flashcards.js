@@ -38,7 +38,7 @@ router.put(
     try {
       let flashcard = req.body;
       flashcard.author = req.user._id;
-      flashcard.category = encodeURIComponent(flashcard.category);
+      // flashcard.category = encodeURIComponent(flashcard.category);
       let updatedFlashcard = await Flashcard.findByIdAndUpdate(
         req.params.id,
         flashcard
