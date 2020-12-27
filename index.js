@@ -20,6 +20,7 @@ app.use(cookieParser());
 require("./utilities/passportConfig");
 
 app.use(require("./routers/flashcards"));
+app.use(require("./routers/review"));
 
 app.listen(process.env.PORT, () => {
   console.log("listen on port " + process.env.PORT);

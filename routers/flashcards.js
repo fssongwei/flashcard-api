@@ -22,7 +22,6 @@ router.post(
     try {
       let flashcard = req.body;
       flashcard.author = req.user._id;
-      // flashcard.category = encodeURIComponent(flashcard.category);
       let createdFlashcard = await Flashcard.create(flashcard);
       res.status(200).send(createdFlashcard);
     } catch (error) {
@@ -38,7 +37,6 @@ router.put(
     try {
       let flashcard = req.body;
       flashcard.author = req.user._id;
-      flashcard.category = encodeURIComponent(flashcard.category);
       let updatedFlashcard = await Flashcard.findByIdAndUpdate(
         req.params.id,
         flashcard
