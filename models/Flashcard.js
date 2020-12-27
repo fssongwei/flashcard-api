@@ -8,6 +8,7 @@ const flashcardSchema = new mongoose.Schema({
   question: String,
   hint: String,
   answer: String,
+  reviewRecord: Array,
 });
 
 module.exports = mongoose.model("Flashcard", flashcardSchema);
